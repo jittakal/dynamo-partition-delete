@@ -2,7 +2,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: {{ .Release.Name }}-ddbctl-job
+  name: {{ .Release.Name }}-ddbctl-dtp-job
 spec:
   template:
     spec:
@@ -12,13 +12,13 @@ spec:
         command: ["/ddbctl", "delete-partition"]
         args:
           - "-t"
-          - "{{ .Values.ddbCtlJob.tableName }}"
+          - "{{ .Values.ddbCtlDtpJob.tableName }}"
           - "-p"
-          - "{{ .Values.ddbCtlJob.partitionValue }}"
+          - "{{ .Values.ddbCtlDtpJob.partitionValue }}"
           - "-e"
-          - "{{ .Values.ddbCtlJob.endpointURL }}"
+          - "{{ .Values.ddbCtlDtpJob.endpointURL }}"
           - "-r"
-          - "{{ .Values.ddbCtlJob.awsRegion }}"
+          - "{{ .Values.ddbCtlDtpJob.awsRegion }}"
           - "-s"
         # Optionally, you can add environment variables here if needed
       restartPolicy: Never

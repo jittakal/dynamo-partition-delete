@@ -41,9 +41,9 @@ $ docker run jittakal/go-dynamodb-partition-delete:latest /ddbctl delete-partiti
 ### Helm - Kubernetes Job
 
 ```bash
-$ # Modify helm/ddebctl-job/values.yaml and deploy
+$ # Modify helm/ddbctl-dtp-job/values.yaml and deploy
 $ cd helm
-$ helm install orders ./ddbctl-job -f ./ddbctl-job/values.yaml
+$ helm install orders ./ddbctl-dtp-job -f ./ddbctl-dtp-job/values.yaml
 
 $ # List deployment details
 $ helm list

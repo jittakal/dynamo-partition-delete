@@ -1,6 +1,6 @@
 ---
 apiVersion: v2
-name: ddbctl-job
+name: ddbctl-dtp-job
 description: A Helm chart for Kubernetes Job - Delete DynamoDB Table Partition
 type: application
 version: 0.1.0

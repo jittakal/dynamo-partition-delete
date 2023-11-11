@@ -1,5 +1,5 @@
 ---
-ddbCtlJob:
+ddbCtlDtpJob:
   tableName: "Orders"
   partitionValue: "TESTTENANTID"
   endpointURL: "http://aws-dynamodb-local.default.svc.cluster.local:8000"
